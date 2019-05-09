@@ -82,13 +82,13 @@ while skip:
     random_num = random.randint(1,10)
     rate_chek()
     print(Fore.GREEN + "[!]" + Style.RESET_ALL + Fore.CYAN +  "Your balance: " + str(points) + Style.RESET_ALL)
-    print(Fore.GREEN + "[!]" + Style.RESET_ALL + Fore.YELLOW + "To continue type \"/skip\", if not, then \"/exit\":" + Style.RESET_ALL)
+    print(Fore.GREEN + "[!]" + Style.RESET_ALL + Fore.YELLOW + "To continue press Enter, otherwise then \"/exit\":" + Style.RESET_ALL)
     skip = input("> ")
-    if skip == "/skip" or skip == "skip":
+    if skip == "":
         rate_chek()
     elif skip == "//cheat_money":
         cheat_money()
-    elif skip != "skip" or (skip == "exit" or skip == "/exit"):
+    elif skip != "" or (skip == "exit" or skip == "/exit"):
         opt_file = open("opt_file.txt", mode = "r+", encoding="latin_1")
         opt_file.seek(0)
         points = crypt(points)
