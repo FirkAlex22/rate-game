@@ -1,6 +1,9 @@
-# Принцип таков, что прога чситывает тхт файл его декодирует с помощью функции
-#  потом работает с ним, в конце его опять шифрует, файл обнуляет и записывает 
+# Принцып таков, что прога чситывает тхт файл его декодирует с помощью функции
+#  потом работает с ним, в конце его опять шифрует, файл обнуляет и записывает
 # Импорт библиоткеки
+# Guessing-game+
+# Chennel https://clck.ru/FvdFV
+# Mail firkalex22l@gmail.com
 from Crypt_num_for_Guessing_game import crypt, decrypt
 import random
 from colorama import init, Back, Fore, Style
@@ -33,6 +36,7 @@ skip = True
 # Main
 def rate_chek():
     global rate, client_num, points, rate
+    opt_file = open("opt_file.txt", mode = "r+", encoding="latin_1")
     random_num = random.randint(1,10)
 # Ставка и игра
     # print(Fore.GREEN)
@@ -56,6 +60,7 @@ def rate_chek():
                     print(Fore.GREEN + "[+]" + Style.RESET_ALL + Fore.RED + "You have won a double bet!!!! The number was " + str(random_num) + Style.RESET_ALL)
                 elif client_num != random_num:
                     points = int(points) - int(rate)
+                    opt_file = open("opt_file.txt", mode = "r+", encoding="latin_1")
                     print(Fore.GREEN + "[-]" + Style.RESET_ALL + Fore.RED + "You lost the bet, your balance: " + str(decrypt(points)) + Style.RESET_ALL)
                     print(Fore.GREEN + "[!]" + Style.RESET_ALL + Fore.CYAN + "number was " + str(random_num) + Style.RESET_ALL)
             else:
