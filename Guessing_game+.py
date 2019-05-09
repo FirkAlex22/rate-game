@@ -1,4 +1,4 @@
-# Принцып таков, что прога чситывает тхт файл его декодирует с помощью функции
+# Принцип таков, что прога считывает тхт файл его декодирует с помощью функции
 #  потом работает с ним, в конце его опять шифрует, файл обнуляет и записывает
 # Импорт библиоткеки
 # Guessing-game+
@@ -69,19 +69,11 @@ def rate_chek():
             if rate == "//cheat_money":
                 cheat_money()
             else:
-                opt_file.seek(0)
-                points = crypt(points)
-                opt_file.write(str(points))
-                opt_file.close()
                 print("Enter normale number!")
     except ValueError:
         if rate == "//cheat_money":
             cheat_money()
         else:
-            opt_file.seek(0)
-            points = crypt(points)
-            opt_file.write(str(points))
-            opt_file.close()
             print("Enter normale number!")
 
 
@@ -89,7 +81,7 @@ def rate_chek():
 while skip:
     random_num = random.randint(1,10)
     rate_chek()
-    print(Fore.GREEN + "[!]" + Style.RESET_ALL + Fore.CYAN +  "Your balance: " + str(decrypt(points)) + Style.RESET_ALL)
+    print(Fore.GREEN + "[!]" + Style.RESET_ALL + Fore.CYAN +  "Your balance: " + str(points) + Style.RESET_ALL)
     print(Fore.GREEN + "[!]" + Style.RESET_ALL + Fore.YELLOW + "To continue type \"/skip\", if not, then \"/exit\":" + Style.RESET_ALL)
     skip = input("> ")
     if skip == "/skip" or skip == "skip":
