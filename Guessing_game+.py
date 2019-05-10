@@ -61,7 +61,7 @@ def rate_chek():
                 elif client_num != random_num:
                     points = int(points) - int(rate)
                     opt_file = open("opt_file.txt", mode = "r+", encoding="latin_1")
-                    print(Fore.GREEN + "[-]" + Style.RESET_ALL + Fore.RED + "You lost the bet, your balance: " + str(decrypt(points)) + Style.RESET_ALL)
+                    print(Fore.GREEN + "[-]" + Style.RESET_ALL + Fore.RED + "You lost the bet, your balance: " + str(points) + Style.RESET_ALL)
                     print(Fore.GREEN + "[!]" + Style.RESET_ALL + Fore.CYAN + "number was " + str(random_num) + Style.RESET_ALL)
             else:
                 print(Fore.RED + "[!]" + Style.RESET_ALL + Fore.CYAN + "Enter normale number!" + Style.RESET_ALL)
