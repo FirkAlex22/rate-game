@@ -35,7 +35,7 @@ W = '\033[0m'  # white
 skip = True
 # Main
 def rate_chek():
-    global rate, client_num, points, rate, opt_file, skip
+    global rate, client_num, points, rate, opt_file, skip, random_num
     opt_file = open("opt_file.txt", mode = "r+", encoding="latin_1")
     random_num = random.randint(1,10)
 # Ставка и игра
