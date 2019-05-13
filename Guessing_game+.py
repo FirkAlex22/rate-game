@@ -85,7 +85,7 @@ while skip_w:
             if rate == "//cheat_money":
                 cheat_money()
             else:
-                print("Enter normale number!")
+                print(Fore.RED + "Enter normale number!" + Style. RESET_ALL)
     except ValueError:
         if rate == "//cheat_money":
             cheat_money()
