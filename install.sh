@@ -6,4 +6,4 @@ pip install os &>> install.log
 pip install colorama &>> install.log
 pip install random &>> install.log
 chmod 777 *
-echo "nstalled"
+echo "Installed"
