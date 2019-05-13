@@ -17,7 +17,6 @@ def cheat_money():
     points = crypt(points)
     opt_file.write(str(points))
     points = decrypt(points)
-    return points
 
 # Цвета
 R = '\033[31m' # red
