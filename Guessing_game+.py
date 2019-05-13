@@ -34,6 +34,10 @@ while skip_w:
     # print(Back.WHITE)
     try:
         print(Fore.GREEN + "[!]" + Style.RESET_ALL + Fore.CYAN + "Enter your bid no more than " + str(points), "and no less than 0:" + Style.RESET_ALL)
+        opt_file.seek(0)
+        points = crypt(points)
+        opt_file.write(str(points))
+        points = decrypt(points)
         rate = input("> ")
     # Много или мало ставки
         if int(rate) < 0 or int(rate) > int(points):
@@ -42,6 +46,10 @@ while skip_w:
         elif int(rate) > 0 and int(rate) <= int(points):
             print(Fore.GREEN + "[!]" + Style.RESET_ALL + Fore.CYAN + "Now enter the number from 1 to 10:" + Style.RESET_ALL)
     # Ввод пользовательского числа
+        opt_file.seek(0)
+        points = crypt(points)
+        opt_file.write(str(points))
+        points = decrypt(points)
         client_num = int(input("> "))
         try:
             if client_num > 0 and (client_num) <= 10 and client_num != 0:
