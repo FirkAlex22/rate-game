@@ -1,12 +1,12 @@
 from Crypt_num_for_Guessing_game import crypt, decrypt
-import random
+import random, os
 from colorama import init, Back, Fore, Style
 init()
 opt_file = open("opt_file.txt", mode = "r+", encoding="latin_1")
 points_s_opt_file = opt_file.read()
 points = points_s_opt_file
 points = decrypt(points)
-
+os.system('clear')
 def cheat_money():
     global points, opt_file, money, decrypt, crypt
     print(Fore.RED + "[cheat]" + Style.RESET_ALL + Fore.YELLOW + "how many it is necessary for you money?" + Style.RESET_ALL)
