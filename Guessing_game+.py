@@ -6,7 +6,11 @@ opt_file = open("opt_file.txt", mode = "r+", encoding="latin_1")
 points_s_opt_file = opt_file.read()
 points = points_s_opt_file
 points = decrypt(points)
-os.system('clear')
+if True:
+	os.system('cls')
+else:	
+	os.system('clear')
+
 def cheat_money():
     global points, opt_file, money, decrypt, crypt
     print(Fore.RED + "[cheat]" + Style.RESET_ALL + Fore.YELLOW + "how many it is necessary for you money?" + Style.RESET_ALL)
@@ -85,7 +89,7 @@ while skip_w:
             if rate == "//cheat_money":
                 cheat_money()
             else:
-                print(Fore.RED + "[!]" + Style.RESET_ALL + Fore.CYAN + "Enter normale number!" + Style.RESET_ALL) 
+                print(Fore.RED + "[!]" + Style.RESET_ALL + Fore.CYAN + "Enter normale number!" + Style.RESET_ALL)
     except ValueError:
         if rate == "//cheat_money":
             cheat_money()
