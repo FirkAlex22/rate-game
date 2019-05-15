@@ -8,7 +8,7 @@ points = points_s_opt_file
 points = decrypt(points)
 if True:
 	os.system('cls')
-else:	
+if True:	
 	os.system('clear')
 
 def cheat_money():
