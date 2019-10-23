@@ -1,6 +1,9 @@
-from Crypt_num_for_Guessing_game import crypt, decrypt
 import random, os
+
 from colorama import init, Back, Fore, Style
+
+from Crypt_num_for_Guessing_game import crypt, decrypt
+
 init()
 text_file = "a)/opt_file.txt"
 opt_file = open(text_file, mode = "r+", encoding="latin_1")
@@ -8,8 +11,7 @@ points_s_opt_file = opt_file.read()
 points = points_s_opt_file
 points = decrypt(points)
 if True:
-	os.system('cls')
-if True:	
+	os.system('cls')	
 	os.system('clear')
 
 def cheat_money():
